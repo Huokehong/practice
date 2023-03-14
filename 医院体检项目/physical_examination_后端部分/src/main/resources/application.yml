@@ -1,0 +1,22 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /physical_examination
+
+logging:
+  level:
+    org.springframework: debug
+    com.neusoft.tijiancms.mapper: debug
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tijian?characterEncoding=utf-8&allowMultiQueries=true
+    username: root
+    password: 123789
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.physical_examination.po,com.example.physical_examination.dto, com.example.physical_examination.controller
+
+
